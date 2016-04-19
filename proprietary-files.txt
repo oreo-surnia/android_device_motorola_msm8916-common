@@ -166,6 +166,10 @@ vendor/lib/libsubsystem_control.so
 vendor/lib/libSubSystemShutdown.so
 vendor/lib/libvoice-svc.so
 
+# Peripheral Manager
+vendor/bin/pm-service
+vendor/lib/libperipheral_client.so
+
 # Sensorhub Firmware
 etc/firmware/sensorhubfw.bin
 etc/firmware/sensorhubver.txt

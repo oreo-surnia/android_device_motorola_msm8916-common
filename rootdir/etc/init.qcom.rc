@@ -486,6 +486,11 @@ service ppd /vendor/bin/mm-pp-daemon
     socket pps stream 0660 system system
     group system graphics
 
+service per_mgr /system/vendor/bin/pm-service
+    class core
+    user system
+    group system
+
 on moto-charger
     setprop ro.board.platform msm8916
 
