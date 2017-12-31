@@ -3,7 +3,10 @@ include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES := \
     framework/native/include \
-    frameworks/native/libs/nativebase/include/ \
+    frameworks/native/libs/nativewindow/include/ \
+    frameworks/native/libs/arect/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/include/media/hardware 
     system/media/camera/include
     
 LOCAL_SRC_FILES := \
@@ -25,5 +28,6 @@ LOCAL_STATIC_LIBRARIES := \
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
+LOCAL_HEADER_LIBRARIES := libnativebase_headers
 
 include $(BUILD_SHARED_LIBRARY)
