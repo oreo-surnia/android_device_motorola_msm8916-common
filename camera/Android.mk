@@ -6,8 +6,8 @@ LOCAL_C_INCLUDES := \
     frameworks/native/libs/nativewindow/include/ \
     frameworks/native/libs/arect/include \
     frameworks/native/libs/nativebase/include \
-    frameworks/native/include/media/hardware 
-    system/media/camera/include
+    frameworks/native/include/media/hardware \
+    system/media/camera/include \
     
 LOCAL_SRC_FILES := \
     CameraWrapper.cpp
