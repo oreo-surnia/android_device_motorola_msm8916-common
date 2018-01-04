@@ -5,7 +5,7 @@ LOCAL_C_INCLUDES := \
     framework/native/include \
     frameworks/native/libs/nativewindow/include/ \
     frameworks/native/libs/arect/include \
-    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/nativebase/include/ \
     frameworks/native/include/media/hardware \
     system/media/camera/include \
     
