@@ -248,4 +248,6 @@
          provisioning, availability etc -->
     <bool name="config_carrier_volte_available">true</bool>
 
+     <!-- Whether to enable HumanInteractionController by default -->
+    <add-resource type="bool" name="config_HICEnabledDefault">false</add-resource>
 </resources>
