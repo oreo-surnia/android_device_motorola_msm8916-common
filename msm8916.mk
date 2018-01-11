@@ -120,7 +120,8 @@ PRODUCT_PACKAGES += \
 # Firmware Extraction
 ifeq ($(filter surnia,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/extract_firmware.sh:install/bin/extract_firmware.sh
+    $(LOCAL_PATH)/configs/extract_firmware.sh:install/bin/extract_firmware.sh \
+    $(LOCAL_PATH)/configs/permfix.sh:install/bin/permfix.sh
 endif
 
 # FM
