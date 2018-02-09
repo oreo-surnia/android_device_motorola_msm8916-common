@@ -2,14 +2,25 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES := \
+    frameworks/native/include \
+    frameworks/native/include/media/openmax \
     system/media/camera/include \
-    frameworks/native/include/media/openmax
 
 LOCAL_SRC_FILES := \
     CameraWrapper.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-    libhardware liblog libcamera_client libutils libcutils libgui
+    android.hidl.token@1.0-utils \
+    libcamera_client \
+    libgui \
+    libhardware \
+    libhidltransport \
+    liblog \
+    libsensor \
+    libutils
+
+LOCAL_STATIC_LIBRARIES := \
+    libarect
 
 ifneq ($(filter harpia lux, $(TARGET_DEVICE)),)
 LOCAL_CFLAGS += -DCLOSE_NATIVE_HANDLE
