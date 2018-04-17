@@ -89,7 +89,7 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libc_util \
     libshims_camera \
-    Snap
+    Camera2
 
 # Display
 PRODUCT_PACKAGES += \
