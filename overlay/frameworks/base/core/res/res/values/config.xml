@@ -256,4 +256,8 @@
     <!-- AlwaysOnDisplay  -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
+    <!-- Control whether Night display is available. This should only be enabled on devices
+           with HWC 2.0 or higher. -->
+    <bool name="config_nightDisplayAvailable">false</bool>
+
 </resources>
