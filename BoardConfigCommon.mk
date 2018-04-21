@@ -136,8 +136,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/libandroid.so|libshim_ril.so \
     /system/lib/libmdmcutback.so|libqsap_shim.so \
     /system/lib/libjustshoot.so|libshims_camera.so \
-    /system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so \
     /system/vendor/lib/libmmcamera_wavelet_lib.so|libshim_atomic.so \
+    /system/lib/libmot_sensorlistener.so|libsensor.so \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so \
     /system/vendor/lib/libmmcamera_wavelet_lib.so|libc_util.so \
