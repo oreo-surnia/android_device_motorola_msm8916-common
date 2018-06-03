@@ -63,9 +63,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
-    android.hardware.audio.effect@2.0-service \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
@@ -88,7 +86,6 @@ PRODUCT_COPY_FILES +=  \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Camera
@@ -104,19 +101,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
      charger_res_images
 
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.hardware.renderscript@1.0-service \
+    android.hardware.graphics.composer@2.1-impl \
     libgenlock \
     gralloc.msm8916 \
     copybit.msm8916 \
@@ -126,10 +118,6 @@ PRODUCT_PACKAGES += \
 
 TARGET_LD_PRELOAD := \
     /system/lib/libboringssl-compat.so
-
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -155,8 +143,7 @@ PRODUCT_PACKAGES += \
     libgnsspps
 
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl-qti \
-    android.hardware.gnss@1.0-service-qti
+    android.hardware.gnss@1.0-impl-qti
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
@@ -173,22 +160,13 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service \
     keystore.msm8916
 
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
-    android.hardware.light@2.0-service \
     lights.msm8916
 
-# LineageActions
-PRODUCT_PACKAGES += \
-    LineageActions
-
-# LiveDisplay native
-PRODUCT_PACKAGES += \
-	vendor.lineage.livedisplay@1.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -211,7 +189,6 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service \
     power.msm8916
 
 # Ramdisk
@@ -240,8 +217,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-impl
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -256,8 +232,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
+    android.hardware.vibrator@1.0-impl
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -290,4 +265,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 $(call inherit-product-if-exists, vendor/motorola/msm8916-common/msm8916-common-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/gzosp/config/common_full_phone.mk)

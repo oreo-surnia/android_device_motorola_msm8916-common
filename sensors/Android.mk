@@ -75,6 +75,7 @@ ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
     endif # surnia || lux || merlin || osprey
 
     LOCAL_C_INCLUDES := $(LOCAL_PATH)/$(SH_PATH)
+    LOCAL_CPP_INCLUDES := device/motorola/msm8916-common/include/
     LOCAL_C_INCLUDES += external/zlib
 
     LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
