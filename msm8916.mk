@@ -92,8 +92,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.msm8916 \
     libc_util \
-    libboringssl-compat \
-    libshims_camera \
+    libboring \
+    libshim_camera \
     Snap
 
 # Charger
@@ -220,10 +220,10 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
-    libqsap_shim \
+    libqsapshim \
     libril-wrapper \
     librmnetctl \
-    libshim_ril \
+    libshimril \
     libxml2
 
 # Telephony
