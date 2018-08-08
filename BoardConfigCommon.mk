@@ -131,21 +131,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 #include device/qcom/sepolicy/legacy-sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
-# Shims
-TARGET_LD_SHIM_LIBS := \
-    /system/lib/libandroid.so|libshim_ril.so \
-    /vendor/lib/libmdmcutback.so|libqsap_shim.so \
-    /vendor/lib/libmot_sensorlistener.so|libsensor.so \
-    /vendor/lib/libjustshoot.so|libshims_camera.so \
-    /vendor/lib/libmmcamera_wavelet_lib.so|libc_util.so \
-    /vendor/lib/libizat_core.so|libshims_get_process_name.so \
-    /vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
-    /vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so
-
-# Sp-shim
-TARGET_LD_PRELOAD := \
-    /vendor/lib/libboringssl-compat.so
-
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 
