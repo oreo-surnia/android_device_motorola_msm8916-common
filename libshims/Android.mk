@@ -34,7 +34,7 @@ include $(BUILD_SHARED_LIBRARY)
 # RIL
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := sensor.cpp
-LOCAL_SHARED_LIBRARIES := libsensor
+LOCAL_SHARED_LIBRARIES := libsensor libandroid
 LOCAL_MODULE := libshimril
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
