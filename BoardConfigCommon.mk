@@ -149,6 +149,11 @@ TARGET_LD_PRELOAD := \
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 
+# Vendor Image
+BOARD_USES_VENDORIMAGE := true
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
