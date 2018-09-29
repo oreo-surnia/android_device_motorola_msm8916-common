@@ -137,9 +137,12 @@ PRODUCT_PACKAGES += \
 # Firmware Extraction
 ifeq ($(filter surnia,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/extract_firmware.sh:install/bin/extract_firmware.sh \
-    $(LOCAL_PATH)/configs/permfix.sh:install/bin/permfix.sh
+    $(LOCAL_PATH)/configs/extract_firmware.sh:$(TARGET_COPY_OUT_VENDOR)/bin/extract_firmware.sh
 endif
+
+# Permission Fix
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permfix.sh:$(TARGET_COPY_OUT_VENDOR)/bin/permfix.sh
 
 # FM
 PRODUCT_PACKAGES += \
@@ -154,7 +157,7 @@ PRODUCT_PACKAGES += \
     libshims_get_process_name
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+    $(LOCAL_PATH)/configs/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -233,8 +236,8 @@ PRODUCT_BOOT_JARS += \
 
 # Seccomp
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
+    $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -243,7 +246,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
