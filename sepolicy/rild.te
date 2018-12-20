@@ -8,3 +8,4 @@ allow rild radio_data_file:file { getattr lock };
 allow rild rild_exec:file execute_no_trans;
 allow rild proc:file { open read };
 
+allow rild system_file:file execute_no_trans;
