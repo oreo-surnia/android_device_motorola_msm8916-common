@@ -63,9 +63,9 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
+    android.hardware.audio@4.0-impl \
     android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.effect@2.0-service \
     audio.a2dp.default \
     audio.primary.msm8916 \
@@ -248,7 +248,10 @@ PRODUCT_COPY_FILES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 	vidc.enc.narrow.searchrange=1 \
-	persist.media.treble_omx=false
+	mm.enable.smoothstreaming=true \
+	mmp.enable.3g2=true \
+	media.aac_51_output_enabled=true \
+	audio.offload.video=true
 
 # OMX
 PRODUCT_PACKAGES += \
