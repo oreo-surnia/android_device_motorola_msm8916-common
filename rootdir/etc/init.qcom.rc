@@ -515,7 +515,7 @@ service wcnss-service /vendor/bin/wcnss_service
     group system wifi radio
 
 #start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
