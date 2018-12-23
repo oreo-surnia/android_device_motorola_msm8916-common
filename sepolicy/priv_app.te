@@ -5,3 +5,4 @@ allow priv_app sysfs:file { open read };
 
 allow priv_app sysfs:file getattr;
 
+allow priv_app device:chr_file { ioctl read write };

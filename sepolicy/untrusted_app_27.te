@@ -11,3 +11,5 @@ allow untrusted_app_27 camera_prop:file getattr;
 allow untrusted_app_27 proc_tty_drivers:file getattr;
 allow untrusted_app_27 qemu_hw_mainkeys_prop:file getattr;
 allow untrusted_app_27 serialno_prop:file open;
+allow untrusted_app_27 device:chr_file { ioctl open read write };
+allow untrusted_app_27 sysfs:file { getattr open read };

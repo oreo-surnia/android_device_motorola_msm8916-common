@@ -133,8 +133,8 @@ PRODUCT_SHIPPING_API_LEVEL := 23
 TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 
 # SELinux
-# include device/qcom/sepolicy-legacy/sepolicy.mk
-# BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+include device/qcom/sepolicy-legacy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
