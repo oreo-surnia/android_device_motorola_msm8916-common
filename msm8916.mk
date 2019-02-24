@@ -168,6 +168,7 @@ PRODUCT_COPY_FILES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
+    ims-ext-common \
     telephony-ext
 
 PRODUCT_BOOT_JARS += telephony-ext
@@ -211,6 +212,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service.msm8916
+
+# Qualcomm
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
