@@ -98,6 +98,7 @@ BOARD_NO_CHARGER_LED := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_USES_METADATA_AS_FDE_KEY := true
 
 # Display
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
