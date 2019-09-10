@@ -254,7 +254,8 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     libqsap_shim \
     librmnetctl \
-    libxml2
+    libxml2 \
+    libshim_binder
 
 # Seccomp
 PRODUCT_COPY_FILES += \
