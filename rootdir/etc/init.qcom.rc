@@ -143,7 +143,6 @@ on boot
     # Create directory used by display clients
     mkdir /data/misc/display 0770 system graphics
     mkdir /persist/display 0770 system graphics
-    mount_all /vendor/etc/fstab.qcom --early
 
     # Change ownership and permission for backlight
     chown system system /sys/class/backlight/lcd-backlight:0/brightness
