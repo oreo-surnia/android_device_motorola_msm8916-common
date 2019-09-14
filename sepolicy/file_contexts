@@ -26,7 +26,7 @@
 /sys/devices/virtual/graphics/fb0/panel_supplier            u:object_r:sysfs_mmi_touch:s0
 
 # Partitions
-/dev/block/bootdevice/by-name/metadata                      u:object_r:metadata_block_device:s0
+/dev/block/platform/soc\.0/7824900\.sdhci/by-name/metadata  u:object_r:metadata_block_device:s0
 /dev/block/platform/soc\.0/7824900\.sdhci/by-name/modem     u:object_r:modem_efs_partition_device:s0
 
 # FSG
