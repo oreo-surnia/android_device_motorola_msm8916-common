@@ -48,13 +48,6 @@ BUILD_BROKEN_PHONY_TARGETS := true
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
-# Kernel Toolchain
-TOP_PATH := $(realpath $(TOP))
-ifneq ($(wildcard $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-8.3),)
-  KERNEL_TOOLCHAIN := $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-8.3/bin
-  KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-endif
-
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x3F ehci-hcd.park=3 vmalloc=400M androidboot.bootdevice=7824900.sdhci utags.blkdev=/dev/block/bootdevice/by-name/utags utags.backup=/dev/block/bootdevice/by-name/utagsBackup movablecore=160M
 BOARD_KERNEL_CMDLINE += loop.max_part=7
