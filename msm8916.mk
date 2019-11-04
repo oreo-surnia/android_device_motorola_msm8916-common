@@ -187,6 +187,8 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -257,14 +259,6 @@ PRODUCT_PACKAGES += \
     libqsap_shim \
     librmnetctl \
     libxml2
-
-# Telephony
-PRODUCT_PACKAGES += \
-    qti-telephony-common \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # Seccomp
 PRODUCT_COPY_FILES += \
