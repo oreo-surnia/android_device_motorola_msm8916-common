@@ -25,12 +25,6 @@ group: AID_RADIO
 mode: 0755
 caps: NET_BIND_SERVICE
 
-[system/vendor/bin/pm-service]
-user: AID_SYSTEM
-group: AID_SYSTEM
-mode: 0755
-caps: NET_BIND_SERVICE
-
 [firmware/]
 mode: 0771
 user: AID_SYSTEM

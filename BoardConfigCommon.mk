@@ -159,9 +159,6 @@ DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
-# Peripheral manager
-TARGET_PER_MGR_ENABLED := true
-
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
