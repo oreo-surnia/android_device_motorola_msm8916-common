@@ -214,6 +214,13 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service \
     keystore.msm8916
 
+# Legacy Recents
+PRODUCT_PACKAGES += \
+    SystemUIWithLegacyRecents
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.android.systemui_legacy.xml:/system/etc/permissions/privapp-permissions-com.android.systemui_legacy.xml
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.msm8916
